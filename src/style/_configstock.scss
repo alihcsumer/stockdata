@@ -1,0 +1,70 @@
+$primary-color:#EFF7F6;
+$secondary-color:#B0E0DD;
+$third-color:#18A657;
+$title-color:#414D58;
+$background-color:#fff;
+
+*{
+   box-sizing: border-box;
+   margin: 0;
+   padding: 0; 
+}
+
+
+
+@mixin transition-ease {
+    transition:all 0.5s ease-in-out;
+}
+
+@mixin box_shadow ($level) {
+
+    @if $level == 1 {
+        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    } @else if $level == 2 {
+        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+    } @else if $level == 3 {
+        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    } @else if $level == 4 {
+        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    } @else if $level == 5 {
+        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+    }
+
+}
+ 
+
+canvas {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); /* mobile webkit */
+  }
+
+@function set-text-color($color)
+{
+    @if(lightness($color) > 40)
+    {
+        @return #000;
+    } @else {
+        @return #fff;
+    }
+     
+}
+
+@mixin media-md{
+    @media screen and (min-width:768px) {
+        @content;
+    }
+}
+
+
+@mixin media-lg{
+    @media screen and (min-width:1024px) {
+        @content;
+    }
+}
+
+
+@mixin media-xl{
+    @media screen and (min-width:1600px) {
+        @content;
+    }
+}

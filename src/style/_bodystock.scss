@@ -1,0 +1,49 @@
+.maincontainer{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    bottom:0;
+    flex-direction: column;
+
+}
+
+.leftcontainer {
+    padding-top: 4em;
+    width: 100vw;
+    background: $secondary-color;
+    @include box_shadow(3);
+    color:$title-color;
+}
+
+
+.chartcontainer{
+    width: 80vw;
+    border-left: 1px solid $secondary-color;
+    flex-grow: 1;
+    padding-top: 1em;
+    height: 100%;
+    .loading{
+        margin: 0;
+        background:$primary-color;
+        position: absolute;
+        top: 50%;
+        left: calc( 50%);
+        margin-right: calc(-50% );
+        transform: translate(-50%, -50%);
+        color:$third-color;
+         padding:10px;
+    }
+
+    h1 {
+        color:$title-color;
+        margin-left:1em;
+    }
+
+}
+
+.range {
+    width: 90% !important;
+    margin:20px 20px 20px 60px;
+}
+
+

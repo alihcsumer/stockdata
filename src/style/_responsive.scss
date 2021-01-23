@@ -1,0 +1,49 @@
+@include media-md{
+    .maincontainer{
+        display: flex;
+        height: 100%;
+        width: 100%;
+        bottom:0;
+        flex-direction: row;
+    
+    }
+    
+    .leftcontainer {
+        padding-top: 4em;
+        width: 20vw;
+        background: $secondary-color;
+        @include box_shadow(3);
+        color:$title-color;
+    }
+    
+    
+    .chartcontainer{
+        width: 80vw;
+        border-left: 1px solid $secondary-color;
+        height: 100%;
+        flex-grow: 1;
+        padding-top: 4em;
+    
+        .loading{
+            margin: 0;
+            background:$primary-color;
+            position: absolute;
+            top: 50%;
+            left: calc(10vw + 50%);
+            margin-right: calc(-50% );
+            transform: translate(-50%, -50%);
+            color:$third-color;
+             padding:10px;
+        }
+    
+        h1 {
+            color:$title-color;
+            margin-left:1em;
+        }
+    
+    }
+    
+    
+    
+    
+}
