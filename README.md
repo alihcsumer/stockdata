@@ -6,7 +6,7 @@ http://amplify-stockdata-staging-170330-deployment.s3-website.us-east-2.amazonaw
 
 ## Usage
 
-Application has a text input with suggestion and a range slider for filtering the date. 
+Application has a text input with suggestion and a range slider for changing the date interval. 
 
 ## Clone the repository 
 
